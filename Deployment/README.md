@@ -5,7 +5,7 @@ Pernahkah kalian melihat sebuah rumah besar yang mewah dengan banyak sekali kama
 
 Jadi dapat disimpulkan, virtualisasi adalah teknologi yang memungkinkan pembuatan mesin virtual di dalam satu fisik server. Dengan menggunakan hypervisor, virtualisasi memungkinkan pengelolaan beberapa sistem operasi atau aplikasi yang berjalan secara mandiri. Konsep dasar virtualisasi melibatkan isolasi sumber daya antara mesin virtual, sehingga setiap mesin virtual dapat beroperasi seolah-olah menjadi mesin fisik yang terpisah.
 
-
+![Virt](./assets/virt.png)
 
 #### Sub-subtitle
 
