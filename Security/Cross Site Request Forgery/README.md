@@ -50,3 +50,8 @@ Website yang dibuat penyerang tujuannya adalah mengelabuhi korban, agar melakuka
 - `CSRF-Token`: Sebagai token unik pada setiap request dan sesi, server akan melakukan verifikasi sebelum memprosesnya.
 - `Validasi Header`: Mengecek referer header untuk memastikan request berasal dalam sumber yang sah.
 - `SameSite Cookie`: Mengatur cookie dengan atribut SameSite untuk membatasi bahwa request dibuat dalam situs yang sama.
+
+## Referensi
+
+1. https://portswigger.net/web-security/csrf
+2. https://owasp.org/www-community/attacks/csrf
