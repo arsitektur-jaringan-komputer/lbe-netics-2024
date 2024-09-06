@@ -119,15 +119,83 @@ server {
 
 ```
 
+## Firewall
 
+### Pengertian Firewall 
+Pernahkah kalian melihat sebuah film bertema casino? Pada casino di film tersebut biasa terdapat sebuah tempat penjaga yang berfungsi untuk menjaga sekaligus melakukan pengecekan terhadap semua orang yang masuk dan keluar, apakah orang tersebut diperbolehkan masuk atau tidak? apakah orang yang keluar telah mencuri suatu barang atau tidak? Nahh tempat penjaga casino ini sama dengan sebuah firewall, jadi dapat disimpulkan bahwa Firewall adalah sebuah Network Security System yang digunakan untuk memantau dan mengendalikan traffic jaringan masuk dan keluar berdasarkan aturan keamanan yang telah ditetapkan. Firewall dapat berupa perangkat keras (hardware) atau perangkat lunak (software), dan fungsinya adalah untuk melindungi jaringan komputer dari ancaman eksternal seperti peretasan, virus, dan serangan cyber lainnya.
+
+![alt text](./assets/fireAnalogy.png)
+
+### Fungsi Firewall
+Firewall berfungsi sebagai "gerbang" atau "penjaga" antara jaringan internal (seperti LAN) dengan jaringan eksternal (seperti internet). Berikut beberapa fungsi utamanya:
+
+- Mencegah unauthorized acces pada system: Mengizinkan hanya traffic yang sah dan memblokir yang tidak sah.
+- Memfilter network traffic: Memastikan bahwa data yang masuk dan keluar sesuai dengan kebijakan keamanan yang telah ditetapkan.
+- Mencegah serangan dari luar: Menjaga dari ancaman seperti serangan DDoS, virus, dan peretasan.
+Mengontrol akses ke jaringan: Membatasi akses pengguna dan perangkat tertentu ke jaringan.
+
+### Jenis Jenis Firewall
+- `Firewall Perangkat Lunak` (Software Firewall)
+Firewall yang berjalan di perangkat komputer atau server. Contoh: firewall bawaan pada Windows, seperti Windows Defender Firewall.
+
+- `Firewall Perangkat Keras` (Hardware Firewall)
+Biasanya berupa router atau perangkat khusus yang ditempatkan di antara jaringan internal dan eksternal. Firewall ini umumnya digunakan dalam organisasi besar.
+
+- `Packet-Filtering Firewall`
+Memeriksa setiap paket data yang melewati firewall berdasarkan header paket, seperti alamat IP dan nomor port. Jika sesuai dengan aturan, paket tersebut diizinkan masuk atau keluar.
+
+- `Stateful Inspection Firewall`
+Firewall ini lebih canggih karena selain memeriksa paket data, juga memantau status koneksi untuk memastikan bahwa sesi komunikasi sah dan sesuai dengan aturan.
+
+- `Proxy Firewall`
+Firewall ini bekerja dengan mengarahkan lalu lintas jaringan melalui server perantara (proxy), yang kemudian membuat permintaan atas nama pengguna.
+
+- `Next-Generation Firewall (NGFW)`
+Firewall generasi terbaru yang menggabungkan beberapa fitur canggih seperti inspeksi deep packet, pemantauan aplikasi, dan deteksi intrusi untuk perlindungan lebih baik.
+
+### Manfaat Firewall
+-  `Keamanan yang Ditingkatkan`: Melindungi jaringan dari ancaman eksternal dan mencegah akses tidak sah.
+
+- `Kontrol Akses`: Memungkinkan administrator untuk menentukan siapa yang dapat mengakses bagian tertentu dari jaringan.
+
+- `Monitoring Jaringan`: Firewall dapat digunakan untuk memantau lalu lintas jaringan dan mendeteksi aktivitas mencurigakan.
+
+- `Proteksi Terhadap Virus dan Malware`: Mencegah penyebaran malware dan virus melalui jaringan dengan memblokir lalu lintas yang mencurigakan.
+
+### Contoh Implementasi Firewall pada Linux instances
+
+##### Mencoba untuk melakukan allowing port http, ssh, dan melakukan blocking pada port 13337
+
+```sh
+sudo ufw enable
+```
+![alt text](./assets/cmd1.png)
+
+```sh
+sudo ufw allow ssh
+sudo ufw allow http
+```
+
+![alt text](./assets/cmd2.png)
+
+```sh
+sudo ufw deny 13337
+```
+![alt text](./assets/cmd3.png)
+
+```sh
+sudo ufw status
+```
+
+![alt text](./assets/cmd4.png)
 
 #### Sub-subtitle
 
 [Cheatsheet Markdown bisa dilihat disini](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 ## To-do (delete later)
-- Virtualization
-- Nginx
-- Firewall
+- Virtualization [done]
+- Nginx [done]
+- Firewall [done]
 - Security (fail2ban, ufw, hardening ssh, intinya pengamanan dasar vm)
 - Deployment DVWA (Live Demo, kalian bisa demoin mau hypervisor atau container)
