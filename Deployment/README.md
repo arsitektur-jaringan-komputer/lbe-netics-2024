@@ -245,6 +245,7 @@ SSH Hardening adalah proses memperkuat keamanan Secure Shell (SSH), yang merupak
    ![alt text](./assets/changePortSSH.png)
 
 3. Sesuaikan konfigurasi yang lain
+
    Contoh `PermitRootLogin no`, `PermitEmptyPasswords no`, `LoginGraceTime 20`, `PermitRootLogin no`, dan `MaxAuthTries 3`.
 
    PermitRootLogin no: Tidak mengizinkan ssh dengan user root.
