@@ -358,15 +358,3 @@ Perintah di atas membuat fail2ban otomatis aktif (run) setiap kali sistem dinyal
 Ketika attacker mencoba melakukan bruteforce ip attacker akan terbanned.
 
 ![alt text](./assets/banIp.png)
-
-#### Sub-subtitle
-
-[Cheatsheet Markdown bisa dilihat disini](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-## To-do (delete later)
-
-- Virtualization [done]
-- Nginx [done]
-- Firewall [done]
-- Security [done]
-- Deployment DVWA (Live Demo, kalian bisa demoin mau hypervisor atau container)
